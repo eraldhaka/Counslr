@@ -5,4 +5,5 @@ package org.counslrapp.model
  */
 class SchoolModel {
     var title: String? = null
+    var profileImg: Int = 0
 }

@@ -9,12 +9,18 @@ import org.counslrapp.model.SchoolModel
  */
 class JoinViewModel: BaseViewModel() {
     private val postTitle = MutableLiveData<String>()
+    private val profileImage = MutableLiveData<Int>()
 
     fun bind(post: SchoolModel){
         postTitle.value = post.title
+        profileImage.value = post.profileImg
     }
 
     fun getPostTitle():MutableLiveData<String>{
         return postTitle
+    }
+
+    fun getSchoolProfile():MutableLiveData<Int>{
+        return profileImage
     }
 }
