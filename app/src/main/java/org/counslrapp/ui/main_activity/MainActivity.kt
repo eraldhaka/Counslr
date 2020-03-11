@@ -1,19 +1,20 @@
-package org.counslrapp
+package org.counslrapp.ui.main_activity
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
-
-
+import org.counslrapp.R
+import org.counslrapp.model.SliderItems
+/**
+ * Created by Erald Haka.
+ */
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var sliderView: SliderView
-    private lateinit var adapter: SliderAdapterExample
+    private lateinit var adapter: MainAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         sliderView = findViewById(R.id.imageSlider)
 
-        adapter = SliderAdapterExample(this)
+        adapter = MainAdapter()
        // adapter = new SliderAdapterExample(this);
         sliderView.setSliderAdapter(adapter)
 
@@ -36,18 +37,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun renewItems() {
-        val sliderItemList = ArrayList<SliderItem>()
+        val sliderItemList = ArrayList<SliderItems>()
         //dummy data
         //Someone to talk to, any time
-        val sliderItem = SliderItem()
+        val sliderItem = SliderItems()
         sliderItem.description = "Someone to talk to, any time"
         sliderItem.imageUrl = R.drawable.slider_image
         sliderItemList.add(sliderItem)
-        val sliderItem1 = SliderItem()
+        val sliderItem1 = SliderItems()
         sliderItem1.description = "Flexible session times"
         sliderItem1.imageUrl = R.drawable.slider_image
         sliderItemList.add(sliderItem1)
-        val sliderItem2 = SliderItem()
+        val sliderItem2 = SliderItems()
         sliderItem2.description = "Private & secure"
         sliderItem2.imageUrl = R.drawable.slider_image
         sliderItemList.add(sliderItem2)
