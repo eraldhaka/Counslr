@@ -13,14 +13,14 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
-           app:layout_constraintGuide_percent="0.2"/>
+           app:layout_constraintGuide_percent="0.1"/>
 
    <androidx.constraintlayout.widget.Guideline
            android:id="@+id/guideline2"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
-           app:layout_constraintGuide_percent="0.8"/>
+           app:layout_constraintGuide_percent="0.75"/>
 
    <com.smarteist.autoimageslider.SliderView
            android:id="@+id/imageSlider"
@@ -55,20 +55,27 @@
            android:layout_height="wrap_content"
            android:layout_centerVertical="true"
            android:textSize="16sp"
-           android:text="Already have an account? Sign In"
+           android:text="@string/main_activity_textView_text"
            android:textColor="#000000"
            android:lineSpacingExtra="1sp"
-           android:fontFamily="@font/literata_book"
+           android:fontFamily="@font/red_hat_regular"
            android:gravity="center_horizontal|center_vertical"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintBottom_toBottomOf="parent"
            android:layout_marginBottom="32dp"/>
    <Button
-           android:text="Button"
+           android:id="@+id/button"
            android:layout_width="0dp"
            android:layout_height="wrap_content"
-           android:id="@+id/button"
+           android:padding="16dp"
+           android:text="@string/main_activity_button_text"
+           android:textAllCaps="false"
+           android:textColor="@color/colorWhite"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:fontFamily="@font/red_hat_regular"
+           android:background="@drawable/rounded_button"
            android:layout_marginStart="16dp"
            android:layout_marginEnd="16dp"
            app:layout_constraintStart_toStartOf="parent"

@@ -2,10 +2,14 @@ package org.counslrapp.ui.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 import org.counslrapp.R
+import org.counslrapp.base.ViewModelFactory
+import org.counslrapp.databinding.ActivityMainBinding
 import org.counslrapp.model.SliderItems
 /**
  * Created by Erald Haka.
@@ -13,19 +17,18 @@ import org.counslrapp.model.SliderItems
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
     lateinit var sliderView: SliderView
     private lateinit var adapter: MainAdapter
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         sliderView = findViewById(R.id.imageSlider)
-
         adapter = MainAdapter()
-       // adapter = new SliderAdapterExample(this);
         sliderView.setSliderAdapter(adapter)
-
         sliderView.setIndicatorAnimation(IndicatorAnimations.THIN_WORM)
         //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
@@ -33,13 +36,12 @@ class MainActivity : AppCompatActivity() {
         sliderView.scrollTimeInSec = 3
         sliderView.isAutoCycle = false
 
+        viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(MainViewModel::class.java)
         renewItems()
     }
 
     fun renewItems() {
         val sliderItemList = ArrayList<SliderItems>()
-        //dummy data
-        //Someone to talk to, any time
         val sliderItem = SliderItems()
         sliderItem.description = "Someone to talk to, any time"
         sliderItem.imageUrl = R.drawable.slider_image

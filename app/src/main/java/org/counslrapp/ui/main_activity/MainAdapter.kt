@@ -9,11 +9,11 @@ import android.widget.TextView
 import com.smarteist.autoimageslider.SliderViewAdapter
 import org.counslrapp.R
 import org.counslrapp.model.SliderItems
-import java.util.ArrayList
 
 /**
  * Created by Erald Haka.
  */
+
 class MainAdapter : SliderViewAdapter<MainAdapter.SliderAdapterVH>() {
     private var mSliderItems: List<SliderItems> = ArrayList()
 

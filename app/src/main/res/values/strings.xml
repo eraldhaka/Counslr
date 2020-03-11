@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CounslrApp</string>
+
+    <!--main activity -->
+    <string name="main_activity_textView_text">Already have an account? Sign In</string>
+    <string name="main_activity_button_text">Let’s Get Started</string>
 </resources>
