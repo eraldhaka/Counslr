@@ -1,23 +1,24 @@
 package org.counslrapp.ui.main_activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
+import kotlinx.android.synthetic.main.activity_main.*
 import org.counslrapp.R
-import org.counslrapp.base.ViewModelFactory
-import org.counslrapp.databinding.ActivityMainBinding
+//import org.counslrapp.databinding.ActivityMainBinding
 import org.counslrapp.model.SliderItems
+import org.counslrapp.ui.join_app.JoinListActivity
+
 /**
  * Created by Erald Haka.
  */
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    //private lateinit var binding: ActivityMainBinding
     lateinit var sliderView: SliderView
     private lateinit var adapter: MainAdapter
     private lateinit var viewModel: MainViewModel
@@ -36,8 +37,14 @@ class MainActivity : AppCompatActivity() {
         sliderView.scrollTimeInSec = 3
         sliderView.isAutoCycle = false
 
-        viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(MainViewModel::class.java)
+       // viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(MainViewModel::class.java)
         renewItems()
+
+        button_start.setOnClickListener {
+            // Handler code here.
+            val intent = Intent(this, JoinListActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun renewItems() {

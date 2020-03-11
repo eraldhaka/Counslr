@@ -65,7 +65,7 @@
            app:layout_constraintBottom_toBottomOf="parent"
            android:layout_marginBottom="32dp"/>
    <Button
-           android:id="@+id/button"
+           android:id="@+id/button_start"
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:padding="16dp"
