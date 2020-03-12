@@ -18,4 +18,16 @@
     <string name="home_activity_home">Home</string>
     <string name="home_activity_sessions">Sessions</string>
     <string name="home_activity_profile">Profile</string>
+
+    <!--home fragment -->
+    <string name="home_fragment_home">Hello, Dwight</string>
+    <string name="home_fragment_description">What are you looking for today?</string>
+    <string name="home_fragment_title_card_session">Schedule a session</string>
+    <string name="home_fragment_description_card_session">Book a specific time and day \nthat works best for you.</string>
+    <string name="home_fragment_button_card_session">Let’s Go</string>
+
+    <string name="home_fragment_title_card_chatting">Chat Now</string>
+    <string name="home_fragment_description_card_chatting">Counselors are available 24/7</string>
+    <string name="home_fragment_button_card_chatting">Start Chatting</string>
+
 </resources>
