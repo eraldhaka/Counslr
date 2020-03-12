@@ -11,11 +11,15 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.join_app.JoinListActivity"
-        android:screenOrientation="portrait">
+        <activity android:name=".ui.home.HomeActivity">
         </activity>
-        <activity android:name=".ui.main_activity.MainActivity"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".ui.join_app.JoinListActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".ui.main_activity.MainActivity"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

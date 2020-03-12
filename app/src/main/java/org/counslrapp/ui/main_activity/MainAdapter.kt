@@ -38,7 +38,6 @@ class MainAdapter : SliderViewAdapter<MainAdapter.SliderAdapterVH>() {
     }
 
     override fun getCount(): Int {
-        //slider view count could be dynamic size
         return mSliderItems.size
     }
 

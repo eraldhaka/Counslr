@@ -1,16 +1,18 @@
 package org.counslrapp.ui.join_app
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-
+import kotlinx.android.synthetic.main.activity_join.*
 import org.counslrapp.R
 import org.counslrapp.base.ViewModelFactory
 import org.counslrapp.databinding.ActivityJoinBinding
+import org.counslrapp.ui.home.HomeActivity
 
 class JoinListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJoinBinding
@@ -29,6 +31,12 @@ class JoinListActivity : AppCompatActivity() {
                 errorMessage -> if(errorMessage != null) showError(errorMessage) else hideError()
         })
         binding.viewModel = viewModel
+
+        imageViewBack.setOnClickListener { finish() }
+        textViewNext.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showError(errorMessage:Int){

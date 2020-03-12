@@ -8,7 +8,14 @@
     <!--join activity -->
     <string name="join_activity_next">Next</string>
     <string name="join_activity_header">Join Counslr</string>
-    <string name="join_activity_description">Counslr partners with colleges to provide \nmental health support to students.</string>
+    <string name="join_activity_description">Counslr partners with colleges to provide \nmental health support to
+        students.
+    </string>
     <string name="join_activity_description2">Our current partnered schools</string>
     <string name="join_activity_footer">Don’t see your school?</string>
+
+    <!--home activity -->
+    <string name="home_activity_home">Home</string>
+    <string name="home_activity_sessions">Sessions</string>
+    <string name="home_activity_profile">Profile</string>
 </resources>
