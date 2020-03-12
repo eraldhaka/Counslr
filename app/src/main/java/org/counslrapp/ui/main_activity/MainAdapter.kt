@@ -34,6 +34,7 @@ class MainAdapter : SliderViewAdapter<MainAdapter.SliderAdapterVH>() {
 
         viewHolder.textViewDescription.text = sliderItem.description
         viewHolder.imageViewBackground.setImageResource(R.drawable.slider_image)
+
     }
 
     override fun getCount(): Int {

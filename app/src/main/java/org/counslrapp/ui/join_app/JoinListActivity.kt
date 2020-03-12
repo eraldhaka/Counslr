@@ -16,11 +16,10 @@ class JoinListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJoinBinding
     private lateinit var viewModel: JoinListViewModel
 
-
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       // setContentView(R.layout.activity_join)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_join)
         binding.postList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 

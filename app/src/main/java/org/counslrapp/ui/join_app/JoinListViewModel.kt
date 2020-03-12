@@ -13,19 +13,16 @@ import java.util.ArrayList
 class JoinListViewModel(): BaseViewModel(){
 
     val joinListAdapter: JoinListAdapter = JoinListAdapter()
-    val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
+    //val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
     val errorMessage:MutableLiveData<Int> = MutableLiveData()
     val errorClickListener = View.OnClickListener { loadPosts() }
 
     private fun loadPosts() {
         println("loadPosts on error")
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-   // private lateinit var subscription: Disposable
 
     init{
-
         val myDataModels = ArrayList<SchoolModel>()
         val schoolModel = SchoolModel()
         schoolModel.title = "Molloy College"
@@ -43,8 +40,4 @@ class JoinListViewModel(): BaseViewModel(){
         joinListAdapter.updatePostList(myDataModels)
     }
 
-    override fun onCleared() {
-        super.onCleared()
-       // subscription.dispose()
-    }
 }
