@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.TintableImageSourceView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
@@ -44,6 +45,17 @@ fun setMutableImage(view: ImageView,  imageSourceView: MutableLiveData<Int>?) {
         imageSourceView.observe(parentActivity, Observer {
                 //value -> view.setImageResource(R.drawable.profile_school)})
                 value ->  if (value != null) view.setImageResource(value) else view.setImageResource(R.drawable.back_arrow)
+        })
+    }
+}
+
+@BindingAdapter("mutableText:color")
+fun setMutableFont(view: ConstraintLayout, backgroundResource: MutableLiveData<Int>?) {
+    val parentActivity:AppCompatActivity? = view.getParentActivity()
+    if(parentActivity != null && backgroundResource != null) {
+        backgroundResource.observe(parentActivity, Observer {
+            //value -> view.setImageResource(R.drawable.profile_school)})
+                value ->  if (value != null) view.setBackgroundResource(value) else view.setBackgroundResource(R.drawable.custom_border)
         })
     }
 }

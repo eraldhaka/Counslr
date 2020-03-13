@@ -10,12 +10,13 @@ import java.util.ArrayList
 /**
  * Created by Erald Haka.
  */
-class JoinListViewModel(): BaseViewModel(){
+class JoinListViewModel(): BaseViewModel(),JoinListAdapter.ChooseSchoolListener{
 
     val joinListAdapter: JoinListAdapter = JoinListAdapter()
     //val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
     val errorMessage:MutableLiveData<Int> = MutableLiveData()
-    val errorClickListener = View.OnClickListener { loadPosts() }
+    val onClick: MutableLiveData<Boolean> = MutableLiveData()
+    //val onClick = View.OnClickListener { loadPosts() }
 
     private fun loadPosts() {
         println("loadPosts on error")
@@ -37,7 +38,12 @@ class JoinListViewModel(): BaseViewModel(){
         myDataModels.add(schoolModel)
         myDataModels.add(schoolModel1)
         myDataModels.add(schoolModel2)
-        joinListAdapter.updatePostList(myDataModels)
+        joinListAdapter.updatePostList(this,myDataModels)
     }
 
+    override fun onSchoolClicked(viewModel: JoinViewModel) {
+        println("onSchoolClicked "+viewModel.getPostTitle().value)
+        joinListAdapter.refreshUI()
+        onClick.postValue(false)
+    }
 }

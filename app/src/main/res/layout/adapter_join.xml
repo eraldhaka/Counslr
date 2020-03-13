@@ -15,6 +15,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:padding="10dp"
+            app:color="@{viewModel.getBackground()}"
             android:background="@drawable/custom_border">
 
         <TextView
