@@ -1,4 +1,4 @@
-package org.counslrapp.ui.home
+package org.counslrapp.ui.session
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,14 +10,13 @@ import org.counslrapp.R
 /**
  * Created by Erald Haka.
  */
-
-class HomeFragment : Fragment() {
+class SessionFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_session, container, false)
     }
 }

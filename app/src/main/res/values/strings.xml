@@ -30,4 +30,12 @@
     <string name="home_fragment_description_card_chatting">Counselors are available 24/7</string>
     <string name="home_fragment_button_card_chatting">Start Chatting</string>
 
+    <!--session fragment -->
+    <string name="session_fragment_session">Sessions</string>
+    <string name="session_fragment_title_card_chatting">Phil McGraw</string>
+    <string name="session_fragment_description_card_chatting">Scheduled session \n10:30 PM Today</string>
+    <string name="session_fragment_button_card_chatting">Enter Session</string>
+    <string name="session_fragment_past_session">Past Sessions</string>
+
+
 </resources>

@@ -44,7 +44,7 @@
             android:baselineAligned="false">
 
         <LinearLayout
-                android:id="@+id/linearLayout_home"
+                android:id="@+id/linearLayoutHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -68,7 +68,7 @@
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/linearLayout_sessions"
+                android:id="@+id/linearLayoutSessions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -79,7 +79,7 @@
                     android:id="@+id/imageView_sessions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/toolbar_messages" />
+                    android:src="@drawable/toolbar_messages_inactive" />
 
             <TextView
                     android:id="@+id/text_view_sessions"
@@ -91,7 +91,7 @@
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/linearLayout_profile"
+                android:id="@+id/linearLayoutProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
