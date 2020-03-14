@@ -11,6 +11,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.session_messages.SessionMessagesActivity">
+        </activity>
         <activity android:name=".ui.home.HomeActivity">
         </activity>
         <activity

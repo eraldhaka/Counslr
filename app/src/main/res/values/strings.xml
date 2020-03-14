@@ -23,7 +23,8 @@
     <string name="home_fragment_home">Hello, Dwight</string>
     <string name="home_fragment_description">What are you looking for today?</string>
     <string name="home_fragment_title_card_session">Schedule a session</string>
-    <string name="home_fragment_description_card_session">Book a specific time and day \nthat works best for you.</string>
+    <string name="home_fragment_description_card_session">Book a specific time and day \nthat works best for you.
+    </string>
     <string name="home_fragment_button_card_session">Let’s Go</string>
 
     <string name="home_fragment_title_card_chatting">Chat Now</string>
@@ -37,5 +38,11 @@
     <string name="session_fragment_button_card_chatting">Enter Session</string>
     <string name="session_fragment_past_session">Past Sessions</string>
 
+    <!--session messages activity -->
+    <string name="session_messages_activity_end_session">End Session</string>
+    <string name="session_messages_activity_name">Phil MacGraw</string>
+    <string name="session_messages_activity_detail">Tap for details</string>
+    <string name="session_messages_activity_session_started">Your session has officially started!</string>
+    <string name="session_messages_activity_session_description">You can now respond to your counselor.</string>
 
 </resources>

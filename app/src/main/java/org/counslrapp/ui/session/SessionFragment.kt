@@ -47,12 +47,6 @@ class SessionFragment : Fragment() {
         sessionModel1.date = "Monday"
         sessionModel1.imageUrl = R.drawable.profile_school
         sessionModels.add(sessionModel1)
-        val sessionModel2 = SessionModel()
-        sessionModel2.title = "Desirae Herwitz"
-        sessionModel2.description =  "Scheduled session\n45 min"
-        sessionModel2.date = "Monday"
-        sessionModel2.imageUrl = R.drawable.profile_school
-        sessionModels.add(sessionModel2)
 
         val sessionAdapter = SessionAdapter(sessionModels)
         recyclerView!!.adapter = sessionAdapter
