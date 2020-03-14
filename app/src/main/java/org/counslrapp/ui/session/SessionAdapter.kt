@@ -1,10 +1,9 @@
 package org.counslrapp.ui.session
 
-import android.content.Context
-import android.text.InputFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +13,6 @@ import org.counslrapp.model.SessionModel
 /**
  * Created by Erald Haka.
  */
-
 class SessionAdapter(private val feedItemList: List<SessionModel>?) :
     RecyclerView.Adapter<SessionAdapter.ViewHolder>() {
 
@@ -28,7 +26,10 @@ class SessionAdapter(private val feedItemList: List<SessionModel>?) :
     override fun onBindViewHolder(@NonNull holder: ViewHolder, position: Int) {
         val feedItem = feedItemList!![position]
 
-        holder.txtTitle!!.text = feedItem.description
+        holder.txtTitle!!.text = feedItem.title
+        holder.txtDescription!!.text = feedItem.description
+        holder.txtDate!!.text = feedItem.date
+        holder.imgProfile!!.setImageResource(feedItem.imageUrl)
 
     }
 
@@ -38,10 +39,16 @@ class SessionAdapter(private val feedItemList: List<SessionModel>?) :
 
     class ViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView){
 
+        var imgProfile: ImageView? = null
         var txtTitle: TextView? = null
+        var txtDescription: TextView? = null
+        var txtDate: TextView? = null
 
         init {
+            imgProfile = itemView.findViewById(R.id.imageView_profile)
             txtTitle = itemView.findViewById(R.id.textView_title)
+            txtDescription = itemView.findViewById(R.id.textView_description)
+            txtDate = itemView.findViewById(R.id.textView_date)
             itemView.tag = itemView
         }
     }

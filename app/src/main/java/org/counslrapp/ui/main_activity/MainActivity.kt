@@ -18,10 +18,8 @@ import org.counslrapp.ui.join_app.JoinListActivity
 
 class MainActivity : AppCompatActivity() {
 
-    //private lateinit var binding: ActivityMainBinding
     lateinit var sliderView: SliderView
     private lateinit var adapter: MainAdapter
-    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,15 +29,12 @@ class MainActivity : AppCompatActivity() {
         adapter = MainAdapter()
         sliderView.setSliderAdapter(adapter)
         sliderView.setIndicatorAnimation(IndicatorAnimations.THIN_WORM)
-        //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
         sliderView.autoCycleDirection = SliderView.AUTO_CYCLE_DIRECTION_RIGHT
         sliderView.scrollTimeInSec = 3
         sliderView.isAutoCycle = false
 
-       // viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(MainViewModel::class.java)
         renewItems()
-
         button_start.setOnClickListener {
             // Handler code here.
             val intent = Intent(this, JoinListActivity::class.java)
@@ -47,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun renewItems() {
+    private fun renewItems() {
         val sliderItemList = ArrayList<SliderItems>()
         val sliderItem = SliderItems()
         sliderItem.description = "Someone to talk to, any time"
