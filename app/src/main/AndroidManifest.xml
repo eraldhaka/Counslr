@@ -11,9 +11,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.session_messages.SessionMessagesActivity">
+        <activity android:name=".ui.session_messages.SessionMessagesActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.home.HomeActivity">
+        <activity android:name=".ui.home.HomeActivity"
+                  android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".ui.join_app.JoinListActivity"

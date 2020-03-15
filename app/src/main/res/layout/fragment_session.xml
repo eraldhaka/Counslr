@@ -92,7 +92,7 @@
                     android:text="@string/session_fragment_button_card_chatting"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button_start_chat"
+                    android:id="@+id/buttonStartChat"
                     app:layout_constraintStart_toStartOf="@+id/textView9"
                     android:textSize="16sp"
                     android:textAllCaps="false"

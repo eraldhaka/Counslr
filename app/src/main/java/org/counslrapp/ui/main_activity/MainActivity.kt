@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
         renewItems()
         button_start.setOnClickListener {
-            // Handler code here.
             val intent = Intent(this, JoinListActivity::class.java)
             startActivity(intent)
         }

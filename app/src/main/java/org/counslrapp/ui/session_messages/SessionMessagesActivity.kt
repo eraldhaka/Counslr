@@ -2,9 +2,12 @@ package org.counslrapp.ui.session_messages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_session_messages.*
 import org.counslrapp.R
 import org.counslrapp.model.MessagesModel
 import org.counslrapp.model.SessionModel
@@ -12,7 +15,10 @@ import org.counslrapp.ui.session.SessionAdapter
 
 class SessionMessagesActivity : AppCompatActivity() {
 
+    private var sessionMessagesAdapter: SessionMessagesAdapter = SessionMessagesAdapter()
     private var recyclerView: RecyclerView? = null
+    private val messagesModels = ArrayList<MessagesModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_session_messages)
@@ -20,12 +26,18 @@ class SessionMessagesActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.session_list)
         recyclerView!!.layoutManager = LinearLayoutManager(this)
         recyclerView!!.addItemDecoration(DividerItemDecoration(recyclerView!!.context, DividerItemDecoration.VERTICAL))
+        recyclerView!!.adapter = sessionMessagesAdapter
+        addIncomeItems()
 
-        addItems()
+        send_message.setOnClickListener {
+            sendItems(editText_message.text.toString())
+            editText_message.setText("")
+        }
+
     }
 
-    private fun addItems() {
-        val messagesModels = ArrayList<MessagesModel>()
+    private fun addIncomeItems() {
+
         val messagesModel = MessagesModel()
 
         messagesModel.messages = "This is an example of a chat."
@@ -41,8 +53,22 @@ class SessionMessagesActivity : AppCompatActivity() {
         messagesModel1.imageUrl = R.drawable.profile_doctor
         messagesModels.add(messagesModel1)
 
-        val sessionMessagesAdapter = SessionMessagesAdapter(messagesModels)
-        recyclerView!!.adapter = sessionMessagesAdapter
-        sessionMessagesAdapter.notifyDataSetChanged()
+
+        sessionMessagesAdapter.addMessage(messagesModels)
+
+
+    }
+
+    private fun sendItems(msg: String) {
+        val messagesModel = MessagesModel()
+
+        messagesModel.messages = msg
+        messagesModel.isSender = true
+        messagesModel.showPhoto = false
+        messagesModel.imageUrl = R.drawable.profile_doctor
+        messagesModels.add(messagesModel)
+
+        sessionMessagesAdapter!!.addMessage(messagesModels)
+        recyclerView!!.scrollToPosition(messagesModels.size - 1)
     }
 }
