@@ -63,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/red_hat_regular"
                     android:textSize="12sp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/home_activity_home"/>
 
         </LinearLayout>
@@ -87,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/red_hat_regular"
                     android:textSize="12sp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/home_activity_sessions" />
         </LinearLayout>
 
@@ -108,6 +110,7 @@
                     android:id="@+id/text_view_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/red_hat_regular"
                     android:textSize="12sp"
                     android:text="@string/home_activity_profile" />

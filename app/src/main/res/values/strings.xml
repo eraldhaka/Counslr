@@ -45,4 +45,17 @@
     <string name="session_messages_activity_session_started">Your session has officially started!</string>
     <string name="session_messages_activity_session_description">You can now respond to your counselor.</string>
 
+    <!--profile fragment -->
+    <string name="profile_fragment_title">Dwight Schrute</string>
+    <string name="profile_fragment_description">Hunter College</string>
+    <string name="profile_fragment_title_two">Additional Services</string>
+    <string name="profile_fragment_description_two">Help is at your fingertips.</string>
+    <string name="profile_fragment_item_1">Edit Profile</string>
+    <string name="profile_fragment_item_2">My Plan</string>
+    <string name="profile_fragment_item_3">FAQ</string>
+    <string name="profile_fragment_item_4">Contact Support</string>
+    <string name="profile_fragment_item_5">Privacy Policies</string>
+    <string name="profile_fragment_item_6">Counslr for Android.1(12)</string>
+    <string name="profile_fragment_logout">Log Out</string>
+
 </resources>

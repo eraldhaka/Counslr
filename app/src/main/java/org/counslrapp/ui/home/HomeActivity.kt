@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.activity_home.*
 import org.counslrapp.R
+import org.counslrapp.ui.profile.ProfleFragment
 import org.counslrapp.ui.session.SessionFragment
 
 class HomeActivity : AppCompatActivity() {
@@ -39,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
 
         linearLayoutHome.setOnClickListener {replaceWithHomeView()}
         linearLayoutSessions.setOnClickListener {replaceWithSessionView()}
-        //linearLayoutProfile.setOnClickListener {replaceWithSessionView()}
+        linearLayoutProfile.setOnClickListener {replaceWithProfileView()}
     }
 
     private fun initFirstView() {
@@ -90,15 +91,15 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceWithProfileView() {
         fragmentTransaction = fragmentManager!!.beginTransaction()
-        val sessionFragment = SessionFragment()
-        fragmentTransaction!!.replace(R.id.fragment_container, sessionFragment, "sessionFragment")
+        val profleFragment = ProfleFragment()
+        fragmentTransaction!!.replace(R.id.fragment_container, profleFragment, "profleFragment")
         fragmentTransaction!!.commit()
 
         imgViewHome.setImageResource(R.drawable.toolbar_home_inactive)
         imgViewSession.setImageResource(R.drawable.toolbar_messages_inactive)
-        imgViewProfile.setImageResource(R.drawable.toolbar_profile)
-        txtHome.setTextColor(ContextCompat.getColor(this, R.color.colorPurple))
+        imgViewProfile.setImageResource(R.drawable.toolbar_profile_active)
+        txtHome.setTextColor(ContextCompat.getColor(this, R.color.colorGray))
         txtSession.setTextColor(ContextCompat.getColor(this, R.color.colorGray))
-        txtProfile.setTextColor(ContextCompat.getColor(this, R.color.colorGray))
+        txtProfile.setTextColor(ContextCompat.getColor(this, R.color.colorPurple))
     }
 }
