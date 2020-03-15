@@ -171,6 +171,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/send_message"/>
         <Button
                 android:text="Send"
+                android:stateListAnimator="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/send_message"

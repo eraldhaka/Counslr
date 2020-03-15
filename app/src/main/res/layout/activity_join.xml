@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
@@ -45,19 +45,12 @@
                 app:layout_constraintTop_toTopOf="@+id/imageViewBack"
                 app:layout_constraintBottom_toBottomOf="@+id/imageViewBack"/>
 
-        <!--<ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:mutableVisibility="@{viewModel.getLoadingVisibility()}"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />-->
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/post_list"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:nestedScrollingEnabled="false"
                 app:adapter="@{viewModel.getJoinListAdapter()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="24dp"
@@ -117,7 +110,7 @@
                 android:textColor="@color/colorDark"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="58dp"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
 
