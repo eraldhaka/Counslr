@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import android.view.WindowManager
 import android.widget.ScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +27,8 @@ class SessionMessagesActivity : AppCompatActivity() {
         val window = window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = Color.WHITE
+
+        scrollView.fullScroll(ScrollView.FOCUS_UP)
 
         recyclerView = findViewById(R.id.session_list)
         recyclerView!!.layoutManager = LinearLayoutManager(this)
@@ -94,10 +95,7 @@ class SessionMessagesActivity : AppCompatActivity() {
         messagesModel1.imageUrl = R.drawable.profile_doctor
         messagesModels.add(messagesModel1)
 
-
         sessionMessagesAdapter.addMessage(messagesModels)
-
-
     }
 
     private fun sendItems(msg: String) {
