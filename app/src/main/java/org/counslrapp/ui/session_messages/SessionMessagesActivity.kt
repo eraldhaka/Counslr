@@ -2,16 +2,11 @@ package org.counslrapp.ui.session_messages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_session_messages.*
 import org.counslrapp.R
 import org.counslrapp.model.MessagesModel
-import org.counslrapp.model.SessionModel
-import org.counslrapp.ui.session.SessionAdapter
 
 class SessionMessagesActivity : AppCompatActivity() {
 
@@ -25,7 +20,6 @@ class SessionMessagesActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.session_list)
         recyclerView!!.layoutManager = LinearLayoutManager(this)
-        recyclerView!!.addItemDecoration(DividerItemDecoration(recyclerView!!.context, DividerItemDecoration.VERTICAL))
         recyclerView!!.adapter = sessionMessagesAdapter
         addIncomeItems()
 
