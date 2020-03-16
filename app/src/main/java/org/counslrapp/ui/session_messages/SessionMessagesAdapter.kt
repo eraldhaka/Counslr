@@ -45,11 +45,11 @@ class SessionMessagesAdapter: RecyclerView.Adapter<SessionMessagesAdapter.ViewHo
         }
 
         if (feedItem.isSender == true) {
-            holder.parent!!.setPadding(100, 10, 15, 10)
+            holder.parent!!.setPadding(100, 0, 15, 0)
             holder.parent!!.gravity = Gravity.RIGHT
             holder.thread!!.setCardBackgroundColor(Color.parseColor("#F2E9DA"))
         } else {
-            holder.parent!!.setPadding(15, 10, 50, 10)
+            holder.parent!!.setPadding(15, 0, 50, 0)
             holder.parent!!.gravity = Gravity.LEFT
             holder.thread!!.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         }
