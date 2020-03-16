@@ -41,7 +41,7 @@ class SessionMessagesAdapter: RecyclerView.Adapter<SessionMessagesAdapter.ViewHo
         if(feedItem.showPhoto == true){
             holder.imgProfile!!.visibility = View.VISIBLE
         }else{
-            holder.imgProfile!!.visibility = View.GONE
+            holder.imgProfile!!.visibility = View.INVISIBLE
         }
 
         if (feedItem.isSender == true) {
@@ -49,7 +49,7 @@ class SessionMessagesAdapter: RecyclerView.Adapter<SessionMessagesAdapter.ViewHo
             holder.parent!!.gravity = Gravity.RIGHT
             holder.thread!!.setCardBackgroundColor(Color.parseColor("#F2E9DA"))
         } else {
-            holder.parent!!.setPadding(15, 10, 100, 10)
+            holder.parent!!.setPadding(15, 10, 50, 10)
             holder.parent!!.gravity = Gravity.LEFT
             holder.thread!!.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         }

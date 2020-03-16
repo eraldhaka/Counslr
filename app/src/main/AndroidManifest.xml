@@ -10,6 +10,7 @@
             android:roundIcon="@mipmap/ic_launcher_app"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.session_messages.SessionMessagesActivity"
                   android:screenOrientation="portrait">

@@ -42,8 +42,8 @@
     <string name="session_messages_activity_end_session">End Session</string>
     <string name="session_messages_activity_name">Phil MacGraw</string>
     <string name="session_messages_activity_detail">Tap for details</string>
-    <string name="session_messages_activity_session_started">Your session has officially started!</string>
-    <string name="session_messages_activity_session_description">You can now respond to your counselor.</string>
+    <string name="session_messages_activity_session_started">Your session has officially \nstarted!</string>
+    <string name="session_messages_activity_session_description">You can now respond to your \ncounselor.</string>
 
     <!--profile fragment -->
     <string name="profile_fragment_title">Dwight Schrute</string>
